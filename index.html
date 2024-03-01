@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Manager</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="book-manager">
+        <header>
+            <h1>Library Manager</h1>
+        </header>
+
+        <div class="top-section">
+            <div class="add-book-form">
+                <h2 class="section-title">Add New Book</h2>
+                <form id="bookForm" action="" method="post">
+                    <div class="input-group">
+                        <input type="text" name="title" id="title" placeholder="">
+                        <label for="title">Title</label>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <input type="text" name="author" id="author" placeholder="">
+                            <label for="author">Author</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" name="year" id="year" placeholder="">
+                            <label for="year">Year</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="isRead" id="isRead" placeholder="">
+                        <label for="isRead">Mark as Read</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Save</button>
+                </form>
+            </div>
+            <div class="search-book-form">
+                <h2 class="section-title">Search Books</h2>
+                <form id="searchForm" action="" method="post">
+                    <div class="input-group">
+                        <input type="text" name="search" id="search" placeholder="">
+                        <label for="search">Search Books</label>
+                    </div>
+                    <div class="form-search-bottom">
+                        <button type="reset" class="reset-btn"><i class='bx bx-reset'></i></button>
+                        <button type="submit" class="search-btn"><i class='bx bx-search-alt-2'></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="unread-books">
+                <h2 class="section-title">Unread Books</h2>
+                <div id="unreadBooksContainer">
+                    <!-- Books will be dynamically added here -->
+                </div>
+            </div>
+            <div class="read-books">
+                <h2 class="section-title">Read Books</h2>
+                <div id="readBooksContainer">
+                    <!-- Books will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
